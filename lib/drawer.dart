@@ -29,7 +29,7 @@ class MainDrawer extends StatelessWidget {
                     //     fit: BoxFit.fill),
                     // ),
                     child: const CircleAvatar(
-                      backgroundImage: AssetImage('assets/draw.jpg'),
+                      backgroundImage: AssetImage('assets/jenny.jpg'),
                       radius: 50,
 
                     ),

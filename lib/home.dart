@@ -9,19 +9,19 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Colors.brown[400],
-      appBar: AppBar(
-      // title: const Text('HOME PAGE'),
-        backgroundColor: Colors.brown[500],
-
-      ),
-      drawer: const MainDrawer(),
-      body:Stack(
+      // appBar: AppBar(
+      // // title: const Text('HOME PAGE'),
+      //   backgroundColor: Colors.brown[500],
+      //
+      // ),
+      // drawer: const MainDrawer(),
+      body:ListView(
         children: [
           Center(
             child: Column(
               children: [
                 Container(
-                   padding: EdgeInsets.only(top: 90),
+                   padding: EdgeInsets.only(top: 150),
                   child: const Text('WELCOME',
                     style: TextStyle(
                       fontSize: 40,fontWeight: FontWeight.w800,

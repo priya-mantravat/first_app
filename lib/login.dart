@@ -116,25 +116,44 @@ class _MyLoginState extends State<MyLogin> {
                          },
                        ),
                        const SizedBox(height: 50),
-                       Row(
-                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                         children: [
-                           const Text(
-                             'Sign In',
-                             style: TextStyle(
-                               fontSize: 27, fontWeight: FontWeight.w500, color: Colors.white
-                             ),
-                           ),
-                           CircleAvatar(
-                             backgroundColor: Colors.white,
-                             child: IconButton(
-                                 onPressed: (){
-                                   _formKey.currentState!.validate();
-                                 },
-                                 icon:  const Icon(Icons.arrow_forward, color: Colors.brown),
-                           ),
-                           ),
-            ]),
+            //            Row(
+            //              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //              children: [
+            //                const Text(
+            //                  'Sign In',
+            //                  style: TextStyle(
+            //                    fontSize: 27, fontWeight: FontWeight.w500, color: Colors.white
+            //                  ),
+            //                ),
+            //                CircleAvatar(
+            //                  backgroundColor: Colors.white,
+            //                  child: IconButton(
+            //                      onPressed: (){
+            //                        _formKey.currentState!.validate();
+            //                      },
+            //                      icon:  const Icon(Icons.arrow_forward, color: Colors.brown),
+            //                ),
+            //                ),
+            // ]),
+                       Container(
+                         child:  TextButton(
+                             onPressed: () {
+                               //here it will validate our form on the basis of its current state
+                               if (_formKey.currentState!.validate()) {
+                                 print("Validated");
+                               }
+                               else
+                               {
+                                 print("Not Validated");
+                               }
+                             },
+                             child: const Text('Sign In',
+                               style: TextStyle(
+                                   decoration: TextDecoration.underline,
+                                   fontSize: 27, fontWeight: FontWeight.w500, color: Colors.white
+                               ),
+                             )),
+                       ),
 
                          Container(
                            child: const TextButton(
