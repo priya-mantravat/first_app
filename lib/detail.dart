@@ -63,7 +63,7 @@ class _MyFormState extends State<MyForm> {
               child: Center(
                 child: Stack(
                   children: [
-                    CircleAvatar(
+                    const CircleAvatar(
                       radius: 80,
                       backgroundImage: AssetImage('assets/jenny.jpg'),
                     ),
